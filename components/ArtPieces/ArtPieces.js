@@ -1,8 +1,9 @@
 import ArtPiecePreview from "../ArtPiecePreview/ArtPiecePreview";
+import styled from "styled-components";
 
 export function ArtPieces({ data }) {
   return (
-    <ul>
+    <StyledUl>
       {data.map((artPiece) => {
         return (
           <li key={artPiece.slug}>
@@ -11,6 +12,13 @@ export function ArtPieces({ data }) {
           </li>
         );
       })}
-    </ul>
+    </StyledUl>
   );
 }
+
+const StyledUl = styled.ul`
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+`;

@@ -34,7 +34,6 @@ export default function HomePage() {
       {error && <h1>Error</h1>}
       {data && (
         <>
-          <h1>Test</h1>
           <ArtPieces data={data} />
         </>
       )}
