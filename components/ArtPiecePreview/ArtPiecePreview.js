@@ -1,27 +1,31 @@
 import Image from "next/image";
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
-export default function ArtPiecePreview({ image, title, artist }) {
+export default function ArtPiecePreview({ image, title, artist, dimensions }) {
   return (
-    <StyledArtContainer>
+    <StyledArtContainer style={{ width: dimensions.width / 8 }}>
       <Image
         alt={`the painting ${title} by artist ${artist}`}
         src={image}
-        width={200}
-        height={300}
+        style={{
+          resizeMode: "center",
+        }}
+        width={dimensions.width / 10}
+        height={dimensions.height / 10}
       />
-      <StyledName>{title}</StyledName>
+      <StyledTitle>{title}</StyledTitle>
       <p>{artist}</p>
     </StyledArtContainer>
   );
 }
 
 const StyledArtContainer = styled.div`
-  padding: 2rem;
+  padding: 1.5rem;
   background-color: lightblue;
-  width-max: 400px;
+  max-height: 28rem;
 `;
 
-const StyledName = styled.h2`
-  font-size: 2rem;
+const StyledTitle = styled.h2`
+  font-size: 1rem;
+  overflow-wrap: normal;
 `;

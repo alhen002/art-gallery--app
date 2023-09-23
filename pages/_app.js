@@ -8,7 +8,6 @@ const fetcher = async (url) => {
     // Attach extra info to the error object.
     error.info = await response.json();
     error.status = response.status;
-    console.log(error);
     throw error;
   }
   return response.json();

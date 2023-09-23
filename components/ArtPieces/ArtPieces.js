@@ -11,6 +11,7 @@ export function ArtPieces({ pieces }) {
               image={artPiece.imageSource}
               title={artPiece.name}
               artist={artPiece.artist}
+              dimensions={artPiece.dimensions}
             />
           </li>
         );
