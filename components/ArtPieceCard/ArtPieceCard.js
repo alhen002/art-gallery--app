@@ -2,16 +2,21 @@ import styled from "styled-components";
 import Image from "next/image";
 
 const StyledCard = styled.article`
-  padding: 5rem;
-  border: 1px solid black;
+  width: 50rem;
+  padding: 3rem;
+  border: 2px solid #91959c;
   border-radius: 2rem;
-  background: light-gray;
-  margin: 5rem 0 5rem;
+  background: #ebeff5;
+  margin: 5rem;
+  display: grid;
+  place-items: center;
 `;
 
 // const StyledImage = styled(Image)``;
 
-const StyledTitle = styled.h1``;
+const StyledTitle = styled.h1`
+  padding-top: 2rem;
+`;
 
 const StyledArtist = styled.h2``;
 
@@ -23,8 +28,8 @@ export default function ArtPieceCard({ artPiece }) {
       <Image
         src={artPiece.imageSource}
         alt={artPiece.name}
-        width={240}
-        height={240}
+        width={artPiece.dimensions.width / 5}
+        height={artPiece.dimensions.height / 5}
       />
       <StyledTitle>{artPiece.name}</StyledTitle>
       <StyledArtist>{artPiece.artist}</StyledArtist>
