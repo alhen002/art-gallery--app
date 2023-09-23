@@ -1,18 +1,17 @@
 import Image from "next/image";
 import styled from "styled-components";
 
-export default function ArtPiecePreview({ artPiece }) {
-  console.log(artPiece);
+export default function ArtPiecePreview({ image, title, artist }) {
   return (
     <StyledArtContainer>
       <Image
-        alt={`the painting ${artPiece.name} by artist ${artPiece.artist}`}
-        src={artPiece.imageSource}
+        alt={`the painting ${title} by artist ${artist}`}
+        src={image}
         width={200}
         height={300}
       />
-      <StyledName>{artPiece.name}</StyledName>
-      <p>{artPiece.artist}</p>
+      <StyledName>{title}</StyledName>
+      <p>{artist}</p>
     </StyledArtContainer>
   );
 }

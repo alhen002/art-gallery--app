@@ -1,22 +1,25 @@
 import ArtPiecePreview from "../ArtPiecePreview/ArtPiecePreview";
 import styled from "styled-components";
 
-export function ArtPieces({ data }) {
+export function ArtPieces({ pieces }) {
   return (
-    <StyledUl>
-      {data.map((artPiece) => {
+    <StyledList>
+      {pieces.map((artPiece) => {
         return (
           <li key={artPiece.slug}>
-            {" "}
-            <ArtPiecePreview artPiece={artPiece} />{" "}
+            <ArtPiecePreview
+              image={artPiece.imageSource}
+              title={artPiece.name}
+              artist={artPiece.artist}
+            />
           </li>
         );
       })}
-    </StyledUl>
+    </StyledList>
   );
 }
 
-const StyledUl = styled.ul`
+const StyledList = styled.ul`
   list-style: none;
   display: flex;
   flex-wrap: wrap;

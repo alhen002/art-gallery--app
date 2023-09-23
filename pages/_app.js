@@ -6,8 +6,8 @@ const fetcher = async (url) => {
   if (!response.ok) {
     const error = new Error("An error occurred while fetching the data.");
     // Attach extra info to the error object.
-    error.info = await res.json();
-    error.status = res.status;
+    error.info = await response.json();
+    error.status = response.status;
     console.log(error);
     throw error;
   }
@@ -16,13 +16,8 @@ const fetcher = async (url) => {
 
 export default function App({ Component, pageProps }) {
   return (
-    <SWRConfig>
-      <GlobalStyle
-        value={{
-          fetcher,
-          refreshInterval: 5000,
-        }}
-      />
+    <SWRConfig value={{ fetcher }}>
+      <GlobalStyle />
       <Component {...pageProps} />
     </SWRConfig>
   );
