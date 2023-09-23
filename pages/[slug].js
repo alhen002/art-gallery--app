@@ -1,5 +1,8 @@
 import ArtPieceDetails from "@/components/ArtPieceDetails/ArtPieceDetails";
+import Button from "@/components/Button/Button";
+import Link from "next/link";
 import { useRouter } from "next/router";
+import styled from "styled-components";
 
 const artworks = [
   {
@@ -34,6 +37,10 @@ const artworks = [
   },
 ];
 
+const ButtonBack = styled(Button)`
+  padding-top: 2rem;
+`;
+
 export default function ArtPiece() {
   const router = useRouter();
   const { slug } = router.query;
@@ -43,5 +50,10 @@ export default function ArtPiece() {
     return null;
   }
 
-  return <ArtPieceDetails artPiece={artwork} />;
+  return (
+    <>
+      <ButtonBack name={"Back"}></ButtonBack>
+      <ArtPieceDetails artPiece={artwork} />
+    </>
+  );
 }
