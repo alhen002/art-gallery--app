@@ -59,7 +59,7 @@ const StyledArtist = styled.h2`
 
 const StyledParagraph = styled.p``;
 
-export default function ArtPieceCard({ artPiece }) {
+export default function ArtPieceDetails({ artPiece }) {
   return (
     <StyledCard>
       <StyledImage

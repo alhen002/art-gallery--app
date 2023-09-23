@@ -1,4 +1,4 @@
-import ArtPieceCard from "@/components/ArtPieceCard/ArtPieceCard";
+import ArtPieceDetails from "@/components/ArtPieceDetails/ArtPieceDetails";
 import { useRouter } from "next/router";
 
 const artworks = [
@@ -43,5 +43,5 @@ export default function ArtPiece() {
     return null;
   }
 
-  return <ArtPieceCard artPiece={artwork} />;
+  return <ArtPieceDetails artPiece={artwork} />;
 }
