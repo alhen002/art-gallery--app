@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import Image from "next/image";
+import FavoriteButton from "../FavoriteButton/FavoriteButton";
 
 const StyledCard = styled.article`
   max-width: 50rem;
@@ -66,8 +67,10 @@ export default function ArtPieceDetails({
   year,
   genre,
   dimensions,
+  isFavorite,
+  onToggleFavorite,
+  slug,
 }) {
-  console.log(image);
   return (
     <StyledCard>
       <StyledImage
@@ -78,6 +81,12 @@ export default function ArtPieceDetails({
         height={dimensions.height / 5}
       />
       <StyledTitle>{title}</StyledTitle>
+      <FavoriteButton
+        slug={slug}
+        isFavorite={isFavorite}
+        onToggleFavorite={onToggleFavorite}
+      />
+
       <StyledArtist>{artist}</StyledArtist>
       <StyledParagraph>
         {year}, genre {genre.toLowerCase()}

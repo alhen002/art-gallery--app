@@ -1,10 +1,10 @@
 import ArtPiecePreview from "../ArtPiecePreview/ArtPiecePreview";
 import styled from "styled-components";
 
-export function ArtPieces({ pieces }) {
+export function ArtPieces({ pieces, onToggleFavorite }) {
   return (
     <StyledList>
-      {pieces.map((artPiece) => {
+      {pieces?.map((artPiece) => {
         return (
           <li key={artPiece.slug}>
             <ArtPiecePreview
@@ -13,6 +13,7 @@ export function ArtPieces({ pieces }) {
               artist={artPiece.artist}
               dimensions={artPiece.dimensions}
               slug={artPiece.slug}
+              onToggleFavorite={onToggleFavorite}
             />
           </li>
         );

@@ -173,10 +173,10 @@ You can use the following commands:
 
 ### [Tasks](https://github.com/neuefische/web-exercises/blob/main/sessions/recap-project-5/art-gallery-app/README.md#tasks-4)
 
-- [ ] Create an additional state `artPiecesInfo` to save further information for art pieces
-- [ ] Make the `artPiecesInfo` state globally available for all pages
-- [ ] Store the favorite flag in the `artPiecesInfo`
-- [ ] Reference art pieces by `slug` in the additional state
+- [x] Create an additional state `artPiecesInfo` to save further information for art pieces
+- [x] Make the `artPiecesInfo` state globally available for all pages
+- [x] Store the favorite flag in the `artPiecesInfo`
+- [x] Reference art pieces by `slug` in the additional state
 - [ ] Create the component `FavoriteButton`
 - [ ] `FavoriteButton` props: `isFavorite`, `onToggleFavorite`
 - [ ] Render the `FavoriteButton` component in the `Spotlight`, `ArtPiecePreview` and `ArtPieceDetails` component

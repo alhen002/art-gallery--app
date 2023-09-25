@@ -8,7 +8,7 @@ const ButtonBack = styled(Button)`
   padding-top: 2rem;
 `;
 
-export default function ArtPiece({ data }) {
+export default function ArtPiece({ data, artPiecesInfo, onToggleFavorite }) {
   const router = useRouter();
   const { slug } = router.query;
   const artwork = data.find((artwork) => artwork.slug === slug);
@@ -24,6 +24,7 @@ export default function ArtPiece({ data }) {
     genre,
     dimensions,
     year,
+    slug: artPieceSlug,
   } = artwork;
 
   return (
@@ -36,6 +37,13 @@ export default function ArtPiece({ data }) {
         genre={genre}
         dimensions={dimensions}
         year={year}
+        isFavorite={
+          artPiecesInfo.length > 0
+            ? artPiecesInfo.find((artPieceInfo) => artPieceInfo.slug === slug)
+            : false
+        }
+        onToggleFavorite={() => onToggleFavorite(artPieceSlug)}
+        slug={slug}
       />
     </>
   );
