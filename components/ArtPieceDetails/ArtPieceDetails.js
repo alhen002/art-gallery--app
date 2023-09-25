@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import Image from "next/image";
 
-const StyledCard = styled.article`
+export const StyledCard = styled.article`
   max-width: 50rem;
   max-height: 60rem;
   padding: 3rem;
@@ -41,7 +41,7 @@ const StyledCard = styled.article`
   }
 `;
 
-const StyledImage = styled(Image)`
+export const StyledImage = styled(Image)`
   border: solid 2px;
   border-bottom-color: #ffe;
   border-left-color: #eed;
@@ -49,15 +49,15 @@ const StyledImage = styled(Image)`
   border-top-color: #ccb;
 `;
 
-const StyledTitle = styled.h1`
+export const StyledTitle = styled.h1`
   padding-top: 2rem;
 `;
 
-const StyledArtist = styled.h2`
+export const StyledArtist = styled.h2`
   font-weight: 500;
 `;
 
-const StyledParagraph = styled.p``;
+export const StyledParagraph = styled.p``;
 
 export default function ArtPieceDetails({
   image,
