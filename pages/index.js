@@ -1,20 +1,18 @@
-export default function SpotLightPage({ image, artist }) {
-  
-const artPiece = {
-  title: 
-  image:
-  artist:
-}
+import { Spotlight } from "@/components/Spotlight/Spotlight";
 
-const spotlightArtPiece = ( artPiece ) => {
-  const [randomArtPiece, setRandomArtPiece] = (null);
-}
-
-
+export default function SpotLightPage({ data }) {
+  if (!Array.isArray(data) || data.length === 0) {
+    return <p>No data available.</p>;
+  }
+  const randomItem = data[Math.floor(Math.random() * data?.length)];
+  console.log(randomItem);
 
   return (
-    <div>
-      <p>this will be the page for the spotlight component</p>
-    </div>
+    <Spotlight
+      image={randomItem.imageSource}
+      artist={randomItem.artist}
+      title={randomItem.name}
+      dimensions={randomItem.dimensions}
+    />
   );
 }
