@@ -81,15 +81,15 @@ You can use the following commands:
 
 ### [Acceptance Criteria](https://github.com/neuefische/web-exercises/blob/main/sessions/recap-project-5/art-gallery-app/README.md#acceptance-criteria-1)
 
-- [ ] One art piece is picked at random to show as a spotlight piece
-- [ ] The art piece image is displayed
-- [ ] The art piece artist is displayed
+- [x] One art piece is picked at random to show as a spotlight piece
+- [x] The art piece image is displayed
+- [x] The art piece artist is displayed
 
 ### [Tasks](https://github.com/neuefische/web-exercises/blob/main/sessions/recap-project-5/art-gallery-app/README.md#tasks-1)
 
-- [ ] Write function to pick one art piece [at random](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random#examples)
-- [ ] Create the component `Spotlight`
-- [ ] `Spotlight` props: `image`, `artist`
+- [x] Write function to pick one art piece [at random](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random#examples)
+- [x] Create the component `Spotlight`
+- [x] `Spotlight` props: `image`, `artist`
 
 ---
 
@@ -195,8 +195,8 @@ You can use the following commands:
 
 ### [Acceptance Criteria](https://github.com/neuefische/web-exercises/blob/main/sessions/recap-project-5/art-gallery-app/README.md#acceptance-criteria-5)
 
-- [ ] A navigation link labeled "Favorites" is displayed
-- [ ] Clicking the "Favorites" shows the FavoritesPage
+- [x] A navigation link labeled "Favorites" is displayed
+- [x] Clicking the "Favorites" shows the FavoritesPage
 - [ ] All favorite art pieces are displayed as a list
 - [ ] Each art piece's image is displayed
 - [ ] Each art piece's title is displayed
@@ -205,9 +205,9 @@ You can use the following commands:
 
 ### [Tasks](https://github.com/neuefische/web-exercises/blob/main/sessions/recap-project-5/art-gallery-app/README.md#tasks-5)
 
-- [ ] Create the page `pages/favorites` that renders the `ArtPieces` component
+- [x] Create the page `pages/favorites` that renders the `ArtPieces` component
 - [ ] Use data from the `artPiecesInfo` state to filter for all favorite art pieces
-- [ ] Pass the list of all favorite art pieces via prop `pieces` to the `ArtPieces` component
+- [x] Pass the list of all favorite art pieces via prop `pieces` to the `ArtPieces` component
 
 ---
 

@@ -34,6 +34,9 @@ export default function Navbar() {
         <li>
           <StyledLink href="/art-pieces/">Pieces</StyledLink>
         </li>
+        <li>
+          <StyledLink href="/favorites/">Favorites</StyledLink>
+        </li>
       </StyledList>
     </StyledNavbar>
   );

@@ -30,12 +30,14 @@ export default function App({ Component, pageProps }) {
   if (isLoading) return <p>IsLoading....</p>;
   if (error) return <p>Error Loading data:{error.message}</p>;
 
-  return (
+  const favoritePages = [];
+  // will follow after implementation of favorites
 
+  return (
     <SWRConfig>
       <Layout>
         <GlobalStyle />
-        {<Component {...pageProps} data={data} />}
+        {<Component {...pageProps} data={data} favorites={favoritePages} />}
       </Layout>
     </SWRConfig>
   );
