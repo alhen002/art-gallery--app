@@ -30,6 +30,7 @@ export default function App({ Component, pageProps }) {
   if (isLoading) return <p>IsLoading....</p>;
   if (error) return <p>Error Loading data:{error.message}</p>;
 
+  // waiting for implementation of the state, functionality still build.
   const artPieceInfo = [{ slug: "blue-and-red", isFavorite: true }];
 
   const favoritePages = data.filter((artPiece) => {
