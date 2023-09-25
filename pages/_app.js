@@ -1,6 +1,8 @@
 import GlobalStyle from "../styles";
 import { Montserrat } from "next/font/google";
 import { SWRConfig } from "swr";
+import Layout from "@/components/Layout/Layout";
+import useSWR from "swr";
 
 const fetcher = async (url) => {
   const response = await fetch(url);
@@ -14,19 +16,27 @@ const fetcher = async (url) => {
   return response.json();
 };
 
-const montserrat = Montserrat({
-  weight: ["400", "500", "700"],
-  style: ["normal", "italic"],
-  subsets: ["latin"],
-});
+const URL = "https://example-apis.vercel.app/api/art";
+
+// const montserrat = Montserrat({
+//   weight: ["400", "500", "700"],
+//   style: ["normal", "italic"],
+//   subsets: ["latin"],
+// });
 
 export default function App({ Component, pageProps }) {
+  const { data, error, isLoading, isValidating } = useSWR(URL, fetcher);
+
+  if (isLoading) return <p>IsLoading....</p>;
+  if (error) return <p>Error Loading data:{error.message}</p>;
+
   return (
-    <SWRConfig value={{ fetcher }}>
-      <main className={montserrat.className}>
+
+    <SWRConfig>
+      <Layout>
         <GlobalStyle />
-        <Component {...pageProps} />
-      </main>
+        {<Component {...pageProps} data={data} />}
+      </Layout>
     </SWRConfig>
   );
 }

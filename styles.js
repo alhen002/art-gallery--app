@@ -9,7 +9,7 @@ export default createGlobalStyle`
 
   body {
     margin: 0;
-    font-family: "Open-Sans";
     background-image:linear-gradient(#eee, #aaa);
+    font-family: sans-serif
   }
 `;

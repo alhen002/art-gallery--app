@@ -19,6 +19,7 @@ export function ArtPieces({ pieces }) {
               title={artPiece.name}
               artist={artPiece.artist}
               dimensions={artPiece.dimensions}
+              slug={artPiece.slug}
             />
           </li>
         );

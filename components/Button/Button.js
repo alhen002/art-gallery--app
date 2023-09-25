@@ -1,6 +1,7 @@
 import styled from "styled-components";
-
-const StyledButton = styled.button`
+import Link from "next/link";
+const StyledLink = styled(Link)`
+  text-decoration: none;
   width: 130px;
   height: 40px;
   margin: 1rem;
@@ -49,7 +50,7 @@ const ButtonContainer = styled.div`
 export default function Button({ name }) {
   return (
     <ButtonContainer>
-      <StyledButton>{name}</StyledButton>
+      <StyledLink href="/art-pieces">{name}</StyledLink>
     </ButtonContainer>
   );
 }
