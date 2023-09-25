@@ -197,16 +197,16 @@ You can use the following commands:
 
 - [x] A navigation link labeled "Favorites" is displayed
 - [x] Clicking the "Favorites" shows the FavoritesPage
-- [ ] All favorite art pieces are displayed as a list
-- [ ] Each art piece's image is displayed
-- [ ] Each art piece's title is displayed
-- [ ] Each art piece's artist is displayed
-- [ ] Each art piece's is displayed with active favorite-button
+- [x] All favorite art pieces are displayed as a list
+- [x] Each art piece's image is displayed
+- [x] Each art piece's title is displayed
+- [x] Each art piece's artist is displayed
+- [x] Each art piece's is displayed with active favorite-button
 
 ### [Tasks](https://github.com/neuefische/web-exercises/blob/main/sessions/recap-project-5/art-gallery-app/README.md#tasks-5)
 
 - [x] Create the page `pages/favorites` that renders the `ArtPieces` component
-- [ ] Use data from the `artPiecesInfo` state to filter for all favorite art pieces
+- [x] Use data from the `artPiecesInfo` state to filter for all favorite art pieces
 - [x] Pass the list of all favorite art pieces via prop `pieces` to the `ArtPieces` component
 
 ---

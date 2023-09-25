@@ -30,8 +30,13 @@ export default function App({ Component, pageProps }) {
   if (isLoading) return <p>IsLoading....</p>;
   if (error) return <p>Error Loading data:{error.message}</p>;
 
-  const favoritePages = [];
-  // will follow after implementation of favorites
+  const artPieceInfo = [{ slug: "blue-and-red", isFavorite: true }];
+
+  const favoritePages = data.filter((artPiece) => {
+    return artPieceInfo.some((element) => {
+      return (artPiece.slug === element.slug) & element.isFavorite;
+    });
+  });
 
   return (
     <SWRConfig>
