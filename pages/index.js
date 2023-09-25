@@ -1,9 +1,18 @@
-// spotlight component will be here
+import { Spotlight } from "@/components/Spotlight/Spotlight";
 
-export default function SpotlightPage({ data }) {
+export default function SpotLightPage({ data }) {
+  if (!Array.isArray(data) || data.length === 0) {
+    return <p>No data available</p>;
+  }
+  const randomItem = data[Math.floor(Math.random() * data.length)];
+
   return (
-    <div>
-      <p>this will be the page for the spotlight component</p>
-    </div>
+    <Spotlight
+      image={randomItem.imageSource}
+      artist={randomItem.artist}
+      title={randomItem.name}
+      dimensions={randomItem.dimensions}
+    />
+
   );
 }

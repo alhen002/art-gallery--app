@@ -31,6 +31,7 @@ export default function App({ Component, pageProps }) {
   if (error) return <p>Error Loading data:{error.message}</p>;
 
   return (
+
     <SWRConfig>
       <Layout>
         <GlobalStyle />

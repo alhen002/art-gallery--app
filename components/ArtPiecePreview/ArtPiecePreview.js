@@ -2,6 +2,17 @@ import Image from "next/image";
 import Link from "next/link";
 import styled, { css } from "styled-components";
 
+const StyledArtContainer = styled.div`
+  padding: 1.5rem;
+  background-color: lightblue;
+  max-height: 28rem;
+`;
+
+const StyledTitle = styled.h2`
+  font-size: 1rem;
+  overflow-wrap: normal;
+`;
+
 export default function ArtPiecePreview({
   image,
   title,
@@ -27,14 +38,3 @@ export default function ArtPiecePreview({
     </Link>
   );
 }
-
-const StyledArtContainer = styled.div`
-  padding: 1.5rem;
-  background-color: lightblue;
-  max-height: 28rem;
-`;
-
-const StyledTitle = styled.h2`
-  font-size: 1rem;
-  overflow-wrap: normal;
-`;
