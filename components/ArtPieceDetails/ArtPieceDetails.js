@@ -59,19 +59,26 @@ const StyledArtist = styled.h2`
 
 const StyledParagraph = styled.p``;
 
-export default function ArtPieceDetails({ artPiece }) {
+export default function ArtPieceDetails({
+  image,
+  title,
+  artist,
+  year,
+  genre,
+  dimensions,
+}) {
   return (
     <StyledCard>
       <StyledImage
-        src={artPiece.imageSource}
-        alt={artPiece.name}
-        width={artPiece.dimensions.width / 5}
-        height={artPiece.dimensions.height / 5}
+        src={image}
+        alt={title}
+        width={dimensions.width / 5}
+        height={dimensions.height / 5}
       />
-      <StyledTitle>{artPiece.name}</StyledTitle>
-      <StyledArtist>{artPiece.artist}</StyledArtist>
+      <StyledTitle>{title}</StyledTitle>
+      <StyledArtist>{artist}</StyledArtist>
       <StyledParagraph>
-        {artPiece.year}, genre {artPiece.genre}
+        {year}, genre {genre.toLowerCase()}
       </StyledParagraph>
     </StyledCard>
   );

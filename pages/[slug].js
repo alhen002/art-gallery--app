@@ -46,14 +46,31 @@ export default function ArtPiece() {
   const { slug } = router.query;
 
   const artwork = artworks.find((artwork) => artwork.slug === slug);
+
   if (!artwork) {
     return null;
   }
 
+  const {
+    artist,
+    imageSource: image,
+    name: title,
+    genre,
+    dimensions,
+    year,
+  } = artwork;
+
   return (
     <>
       <ButtonBack name={"Back"}></ButtonBack>
-      <ArtPieceDetails artPiece={artwork} />
+      <ArtPieceDetails
+        image={image}
+        artist={artist}
+        title={title}
+        genre={genre}
+        dimensions={dimensions}
+        year={year}
+      />
     </>
   );
 }
