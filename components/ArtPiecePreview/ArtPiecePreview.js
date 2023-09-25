@@ -1,21 +1,30 @@
 import Image from "next/image";
+import Link from "next/link";
 import styled, { css } from "styled-components";
 
-export default function ArtPiecePreview({ image, title, artist, dimensions }) {
+export default function ArtPiecePreview({
+  image,
+  title,
+  artist,
+  dimensions,
+  slug,
+}) {
   return (
-    <StyledArtContainer style={{ width: dimensions.width / 8 }}>
-      <Image
-        alt={`the painting ${title} by artist ${artist}`}
-        src={image}
-        style={{
-          resizeMode: "center",
-        }}
-        width={dimensions.width / 10}
-        height={dimensions.height / 10}
-      />
-      <StyledTitle>{title}</StyledTitle>
-      <p>{artist}</p>
-    </StyledArtContainer>
+    <Link href={`/art-pieces/${slug}`}>
+      <StyledArtContainer style={{ width: dimensions.width / 8 }}>
+        <Image
+          alt={`the painting ${title} by artist ${artist}`}
+          src={image}
+          style={{
+            resizeMode: "center",
+          }}
+          width={dimensions.width / 10}
+          height={dimensions.height / 10}
+        />
+        <StyledTitle>{title}</StyledTitle>
+        <p>{artist}</p>
+      </StyledArtContainer>
+    </Link>
   );
 }
 

@@ -67,11 +67,13 @@ export default function ArtPieceDetails({
   genre,
   dimensions,
 }) {
+  console.log(image);
   return (
     <StyledCard>
       <StyledImage
         src={image}
         alt={title}
+        quality={75}
         width={dimensions.width / 5}
         height={dimensions.height / 5}
       />
