@@ -5,7 +5,7 @@ import {
   StyledTitle,
 } from "../ArtPieceDetails/ArtPieceDetails";
 
-export function Spotlight({ image, artist, title, dimensions }) {
+export default function Spotlight({ image, artist, title, dimensions }) {
   return (
     <StyledCard>
       <StyledTitle> {title} </StyledTitle>
