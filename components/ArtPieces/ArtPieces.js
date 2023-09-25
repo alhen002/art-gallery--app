@@ -1,6 +1,13 @@
 import ArtPiecePreview from "../ArtPiecePreview/ArtPiecePreview";
 import styled from "styled-components";
 
+const StyledList = styled.ul`
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+`;
+
 export function ArtPieces({ pieces }) {
   return (
     <StyledList>
@@ -19,10 +26,3 @@ export function ArtPieces({ pieces }) {
     </StyledList>
   );
 }
-
-const StyledList = styled.ul`
-  list-style: none;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-`;

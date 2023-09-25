@@ -1,6 +1,17 @@
 import Image from "next/image";
 import styled, { css } from "styled-components";
 
+const StyledArtContainer = styled.div`
+  padding: 1.5rem;
+  background-color: lightblue;
+  max-height: 28rem;
+`;
+
+const StyledTitle = styled.h2`
+  font-size: 1rem;
+  overflow-wrap: normal;
+`;
+
 export default function ArtPiecePreview({ image, title, artist, dimensions }) {
   return (
     <StyledArtContainer style={{ width: dimensions.width / 8 }}>
@@ -18,14 +29,3 @@ export default function ArtPiecePreview({ image, title, artist, dimensions }) {
     </StyledArtContainer>
   );
 }
-
-const StyledArtContainer = styled.div`
-  padding: 1.5rem;
-  background-color: lightblue;
-  max-height: 28rem;
-`;
-
-const StyledTitle = styled.h2`
-  font-size: 1rem;
-  overflow-wrap: normal;
-`;

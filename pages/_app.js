@@ -23,10 +23,10 @@ const montserrat = Montserrat({
 export default function App({ Component, pageProps }) {
   return (
     <SWRConfig value={{ fetcher }}>
-    <main className={montserrat.className}>
-      <GlobalStyle />
-      <Component {...pageProps} />
-    </main>
-</SWRConfig>
+      <main className={montserrat.className}>
+        <GlobalStyle />
+        <Component {...pageProps} />
+      </main>
+    </SWRConfig>
   );
 }
