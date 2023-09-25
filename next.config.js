@@ -3,6 +3,10 @@ const nextConfig = {
   compiler: {
     styledComponents: true,
   },
+  images: {
+    domains: ["example-apis.vercel.app"],
+  },
+
   reactStrictMode: true,
   images: {
     domains: ["example-apis.vercel.app"],

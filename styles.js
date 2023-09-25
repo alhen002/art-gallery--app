@@ -9,6 +9,7 @@ export default createGlobalStyle`
 
   body {
     margin: 0;
-    font-family: system-ui;
+    font-family: "Open-Sans";
+    background-image:linear-gradient(#eee, #aaa);
   }
 `;

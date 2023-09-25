@@ -1,4 +1,5 @@
 import GlobalStyle from "../styles";
+import { Montserrat } from "next/font/google";
 import { SWRConfig } from "swr";
 
 const fetcher = async (url) => {
@@ -13,11 +14,19 @@ const fetcher = async (url) => {
   return response.json();
 };
 
+const montserrat = Montserrat({
+  weight: ["400", "500", "700"],
+  style: ["normal", "italic"],
+  subsets: ["latin"],
+});
+
 export default function App({ Component, pageProps }) {
   return (
     <SWRConfig value={{ fetcher }}>
+    <main className={montserrat.className}>
       <GlobalStyle />
       <Component {...pageProps} />
-    </SWRConfig>
+    </main>
+</SWRConfig>
   );
 }
